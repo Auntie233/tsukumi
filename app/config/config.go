@@ -6,7 +6,5 @@ const (
 	LogFilePath = ""
 	LogFileName = "tsukumi.log"
 
-	DbUrl      = "jdbc:mysql://localhost:3306/tsukumi?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true"
-	DbUsername = "root"
-	DbPassword = "Boluo123"
+	DbUrl = "root:Boluo123@/tsukumi?charset=utf8"
 )

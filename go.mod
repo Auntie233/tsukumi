@@ -4,9 +4,11 @@ go 1.15
 
 require (
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-sql-driver/mysql v1.5.0 // indirect
+	github.com/go-sql-driver/mysql v1.5.0
 	github.com/go-xorm/cmd/xorm v0.0.0-20190426080617-f87981e709a1 // indirect
-	github.com/go-xorm/xorm v0.7.9 // indirect
+	github.com/go-xorm/xorm v0.7.9
+	github.com/jonboulle/clockwork v0.2.2 // indirect
+	github.com/kr/pretty v0.1.0 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/lestrrat-go/strftime v1.0.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

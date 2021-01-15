@@ -2,16 +2,23 @@ package login
 
 import (
 	"github.com/gin-gonic/gin"
+	"log"
+	"tsukumi/app/common/db"
 	"tsukumi/app/common/response"
+	models "tsukumi/app/entity/po"
 )
 
-type LoginVo struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
-}
-
 func Login(c *gin.Context) {
-	vo := LoginVo{Username: "123", Password: "321"}
 	resp := response.Gin{Ctx: c}
-	resp.Success("", vo)
+	//dicList := make([]models.DicInfo, 0)
+	engine := db.GetConnect()
+	//err := engine.ID(4).Find(&dicList)
+	dic := &models.DicInfo{}
+	_, err := engine.ID(4).Get(dic)
+	if err != nil {
+		log.Println(err.Error())
+		resp.Success(err.Error(), nil)
+		return
+	}
+	resp.Success("", dic)
 }
